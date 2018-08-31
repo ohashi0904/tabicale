@@ -1,0 +1,53 @@
+body {
+	margin: 0 auto;
+}
+
+.bx-wrapper {
+	min-width:1080px;
+	width:auto;
+  margin: 0 !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+.slider img{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  z-index: 1;
+  background-size: cover;
+  border-radius:0 0 700px 700px / 0 0 50px 50px;
+}
+.chuo_yose{
+	        text-align:center;
+}
+
+#home_menu {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+
+#contents_home{
+	width: 1080px;
+	height: auto;
+	padding-top: 70px;
+	margin-top: 50px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+	background-color: #ffffff;
+	overflow: auto;
+	background: #ffffff;
+}
+
+#contents_home  h1{
+	width: 100%;
+	border-bottom: 1px solid black;
+
+}

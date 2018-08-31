@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- Strutsの詳細設定 -->
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="false" />
+	<package name="com.internousdev.tabicale.action" extends="struts-default">
+
+	<!-- 1.ユーザー登録機能 -->
+
+	<action name="CreateUserAction" class="com.internousdev.tabicale.action.CreateUserAction" method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+
+	<action name="CreateUserConfirmAction" class="com.internousdev.tabicale.action.CreateUserConfirmAction" method="execute">
+		<result name="success">createUserConfirm.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+    <action name="CreateUserCompleteAction" class="com.internousdev.tabicale.action.CreateUserCompleteAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">resetPasswordComplete.jsp</result>
+		<result name="success">createUserComplete.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+
+	 <!-- 2.ログイン認証機能 -->
+	<action name="LoginAction" class="com.internousdev.tabicale.action.LoginAction" method="execute">
+		<result name="success">home.jsp</result>
+		<result name="settlement">cart.jsp</result>
+		<result name="error">login.jsp</result>
+		<result name="admin">admin.jsp</result>
+	</action>
+
+	<action name="GoLoginAction" class="com.internousdev.tabicale.action.GoLoginAction" method="execute">
+		<result name="success">login.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	 <!-- 3.パスワード再設定機能 -->
+	<action name="ResetPasswordAction" class="com.internousdev.tabicale.action.ResetPasswordAction" method="execute">
+		<result name="success">resetPassword.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="ResetPasswordConfirmAction" class="com.internousdev.tabicale.action.ResetPasswordConfirmAction" method="execute">
+		<result name="success">resetPasswordConfirm.jsp</result>
+		<result name="error">resetPassword.jsp</result>
+	</action>
+
+	<action name="ResetPasswordCompleteAction" class="com.internousdev.tabicale.action.ResetPasswordCompleteAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">resetPasswordComplete.jsp</result>
+		<result name="success">resetPasswordComplete.jsp</result>
+		<result name="error">resetPassword.jsp</result>
+	</action>
+
+
+	<!-- 4-1.商品一覧機能 -->
+   	<action name="ProductListAction" class="com.internousdev.tabicale.action.ProductListAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- 4-2.商品詳細機能 -->
+	<action name="ProductDetailsAction" class="com.internousdev.tabicale.action.ProductDetailsAction" method="execute">
+		<result name="success">productDetails.jsp</result>
+		<result name="error">error.html</result>
+	</action>
+
+	 <!-- 5.商品検索機能 -->
+	 <action name="SearchItemAction" class="com.internousdev.tabicale.action.SearchItemAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">productList.jsp</result>
+	</action>
+
+
+	<!-- 6.カート機能 -->
+	<action name="CartAction" class="com.internousdev.tabicale.action.CartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="AddCartAction" class="com.internousdev.tabicale.action.AddCartAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">cart.jsp</result>
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+		<result name="input">cart.jsp</result>
+	</action>
+
+	<action name="DeleteCartAction" class="com.internousdev.tabicale.action.DeleteCartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">cart.jsp</result>
+	</action>
+
+	<!-- 7.宛先情報選択機能 -->
+	<action name="SettlementConfirmAction" class="com.internousdev.tabicale.action.SettlementConfirmAction" method="execute">
+		<result name="success">settlementConfirm.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<!-- 8.宛先情報登録機能 -->
+	<action name="CreateDestinationAction" class="com.internousdev.tabicale.action.CreateDestinationAction" method="execute">
+		<result name="success">createDestination.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="CreateDestinationConfirmAction" class="com.internousdev.tabicale.action.CreateDestinationConfirmAction" method="execute">
+		<result name="success">createDestinationConfirm.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+	<action name="CreateDestinationCompleteAction" class="com.internousdev.tabicale.action.CreateDestinationCompleteAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">createDestinationComplete.jsp</result>
+		<result name="success">createDestinationComplete.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+	<!-- 9.決済完了画面 -->
+	<action name="SettlementCompleteAction" class="com.internousdev.tabicale.action.SettlementCompleteAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">error.html</result>
+		<result name="success">settlementComplete.jsp</result>
+		<result name="error">settlementConfirm.jsp</result>
+	</action>
+
+	<!-- 10.マイページ機能 -->
+	<action name="MyPageAction" class="com.internousdev.tabicale.action.MyPageAction" method="execute">
+		<result name="success">mypage.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<!-- 11.商品購入履歴機能 -->
+	<action name="PurchaseHistoryAction" class="com.internousdev.tabicale.action.PurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result>
+	</action>
+
+	<action name="DeletePurchaseHistoryAction" class="com.internousdev.tabicale.action.DeletePurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<!-- 12.ログアウト機能 -->
+	<action name="LogoutAction" class="com.internousdev.tabicale.action.LogoutAction" method="execute">
+		<result name="success">index.jsp</result>
+		<result name="error">index.jsp</result>
+	</action>
+
+	<!-- 13.商品管理機能 -->
+	<action name="AddProductAction" class="com.internousdev.tabicale.action.AddProductAction" method="execute">
+		<result name="success">addProductAction.jsp</result>
+		<result name="error">adminProductInfo.jsp</result>
+	</action>
+
+	<action name="AddProductConfirmAction" class="com.internousdev.tabicale.action.AddProductConfirmAction" method="execute">
+		<interceptor-ref name="fileUpload">
+		</interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="success">addProductConfirmAction.jsp</result>
+		<result name="error">addProductAction.jsp</result>
+	</action>
+
+	<action name="AddProductCompleteAction" class="com.internousdev.tabicale.action.AddProductCompleteAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">addProductCompleteAction.jsp</result>
+		<result name="success">addProductCompleteAction.jsp</result>
+		<result name="error">addProductConfirmAction.jsp</result>
+		<result name="noadmin">home.jsp</result>
+	</action>
+	<action name="DeleteProductAction" class="com.internousdev.tabicale.action.DeleteProductAction" method="execute">
+		<result name="success">adminProductInfo.jsp</result>
+	</action>
+
+
+	<action name="AdminProductInfoAction" class="com.internousdev.tabicale.action.AdminProductInfoAction" method="execute">
+		<result name="success">adminProductInfo.jsp</result>
+	</action>
+	<action name="AdminUserInfoAction" class="com.internousdev.tabicale.action.AdminUserInfoAction" method="execute">
+		<result name="success">adminUserInfo.jsp</result>
+	</action>
+
+	<action name="AdminDestinationInfoAction" class="com.internousdev.tabicale.action.AdminDestinationInfoAction" method="execute">
+		<result name="success">adminDestinationInfo.jsp</result>
+	</action>
+
+
+	<action name="AdminPurchaseHistoryInfoAction" class="com.internousdev.tabicale.action.AdminPurchaseHistoryInfoAction" method="execute">
+		<result name="success">adminPurchaseHistoryInfo.jsp</result>
+	</action>
+	<action name="AdminCartInfoAction" class="com.internousdev.tabicale.action.AdminCartInfoAction" method="execute">
+		<result name="success">adminCartInfo.jsp</result>
+	</action>
+
+	<!-- HOME -->
+
+  	<action name="HomeAction" class="com.internousdev.tabicale.action.HomeAction" method="execute">
+		<result name="success">home.jsp</result>
+	</action>
+
+	</package>
+</struts>

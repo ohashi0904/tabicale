@@ -1,0 +1,36 @@
+table.horizontal-list-table, th, td {
+	border-collapse: collapse;
+	border: 1px solid #000;
+	line-height: 1.5;
+}
+
+table.horizontal-list-table th {
+	width: 150px;
+	padding: 35px;
+	color: black;
+
+}
+table.horizontal-list-table td {
+	width: 350px;
+	height: 100px;
+	padding: 10px;
+	text-align: center;
+	background-color:#e9e4d4;
+}
+.image{
+	width:80%;
+}
+
+.info {
+	margin-left : 5%;
+	width : 40%;
+  	padding : 30px;
+	color: black;
+	background-color: skyblue;
+
+}
+
+.historydetails{
+	max-width:108px;
+	word-wrap: break-word;
+}

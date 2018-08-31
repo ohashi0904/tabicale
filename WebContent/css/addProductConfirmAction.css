@@ -1,0 +1,88 @@
+body{
+	background-image: url("../images/admin_addProduct_background.jpg");
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size:100% 100%;
+}
+.contents{
+	margin-bottom: 30px;
+}
+.contents  h1{
+	width:90%;
+	margin-left:5%;
+	border-bottom:3px double black;
+}
+
+.main-contents{
+	width:1250px;
+	margin:0 auto;
+}
+
+.addList-confirm{
+	width: 700px;
+	border-collapse: collapse;
+	margin:60px auto;
+}
+.addList-confirm th.border{
+	height:50px;
+	width: 30%;
+	background-color: orange;
+
+}
+.addList-confirm tr.border td{
+	width: 70%;
+	text-align: center;
+	background-color: white;
+}
+.no-image{
+	display: none;
+}
+.image-box{
+	width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+.image-inner-box{
+	text-align: center;
+}
+.image-file{
+	display:inline-block;
+	width:48%;
+}
+.image-p{
+	text-align: center;
+	background-color: orange;
+	padding: 20px 50px 20px 50px;
+	margin:0 20%;
+	border:1px solid #333;
+	font-weight: bold;
+}
+.image {
+	border: 1px solid #c0c0c0;
+	width: 400px;
+	height: auto;
+}
+.border{
+	border:1px solid #333;
+}
+.button{clear: both;
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.submit-button{
+	width:200px;
+	height:50px;
+	padding:10px;
+    color: black;
+    background: #fd9535;/*êF*/
+    border-radius: 4px;/*äpÇÃä€Ç›*/
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    font-weight: bold;
+    border: solid 2px #d27d00;/*ê¸êF*/
+    cursor:pointer;
+}
+.submit-button:hover{
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}

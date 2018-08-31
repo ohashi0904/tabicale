@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+#contents .cart_totalPrice{
+	margin:0 auto;
+	margin-bottom:60px;
+	font-size:2rem;
+}
+
+.cartdetails{
+	max-width:108px;
+	word-wrap: break-word;
+}
+
+#contents .cart_totalPrice tr td:nth-child(2){
+	width:250px;
+	text-align:right;
+	background: rgba(235,225,255,1);
+}
+
+.no_info_messeage{
+	height:100%;
+	margin-left:5%;
+}
+
+#cartTotalPrice{
+	text-align:center;
+	border:none;
+}
+
+#contents .horizontal-list-table {
+	text-align:center;
+	border-collapse: collapse;
+	background-color:#e9e4d4;
+}
+

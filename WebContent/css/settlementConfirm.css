@@ -1,0 +1,51 @@
+table{
+	width:1080px;
+	border:solid 1px black;
+}
+
+thead{
+	height:35px;
+	background-color:blue;
+	color:white;
+}
+
+tbody{
+	background-color:white;
+}
+
+.radio{
+	width:40px;
+	max-width:40px;
+}
+
+.name, .kana{
+	width:140px;
+	max-width:140px;
+	word-wrap: break-word;
+}
+
+.address{
+	max-width:360px;
+	word-wrap: break-word;
+
+}
+
+.tel{
+	width:150px;
+	max-width:150px;
+	word-wrap: break-word;
+}
+
+.mail{
+	width:200px;
+	max-width:200px;
+	word-wrap: break-word;
+}
+
+td{
+	text-align: center;
+}
+
+#contents-btn-set{
+	margin-top:25px;
+}

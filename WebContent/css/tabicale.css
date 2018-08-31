@@ -1,0 +1,244 @@
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	z-index: 0;
+}
+
+#header {
+	position: relative;
+	min-width: 1080px;
+	width: 100%;
+	height: 60px;
+	margin-bottom: 35px;
+	padding-bottom: 50px;
+	background: rgba(0, 0, 0, 0);
+	z-index: 100;
+}
+
+#header-menu {
+	float: right;
+	width: 800px;
+	margin-top: 10px;
+}
+
+#header-menu ul {
+	margin-top: 30px;
+	clear:both;
+}
+
+#header-menu ul li {
+	float: left;
+	list-style: none;
+	padding-right: 1.5%;
+	color: white;
+}
+
+#header-title {
+	float: left;
+	height: 30px;
+	margin-top: 35px;
+	margin-left: 15px;
+}
+
+.cs-div {
+	width: 95%;
+	height: 30px;
+}
+
+.txt-keywords {
+	width: 95%;
+	height: 20px;
+}
+
+#header-menu .submit_btn {
+	position: relative;
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.25em 0;
+	text-decoration: none;
+	color: white;
+	font-size: 17px;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-bottom: 1px solid white;
+	cursor: pointer;
+}
+
+#page {
+	background-position: center;
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 100%;
+	width: auto;
+	min-width: 1080px;
+	margin-bottom: -30px;
+	padding-bottom: 60px;
+}
+
+#page2 {
+	background-position: center;
+	background-image: url("../images/admin_addProduct_background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 100%;
+	width: auto;
+	min-width: 1080px;
+	max-width: 100%;
+	margin-bottom: -30px;
+	padding-bottom: 60px;
+}
+
+#contents {
+	width: 1080px;
+	height: auto;
+	padding-top: 70px;
+	margin-top: 50px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	background-color: skyblue;
+	overflow: auto;
+	background: rgba(149, 192, 236, 0.66);
+}
+
+#contents_sub {
+	width: 600px;
+	height: auto;
+	margin-left: 5%;
+	padding: 30px;
+	padding-bottom: 100px;
+	background-color: skyblue;
+	border-radius: 50px;
+	background: rgba(149, 192, 236, 0.5);
+}
+
+#contents  h1, #contents_sub h1 {
+	width: 100%;
+	border-bottom: 3px double black;
+}
+
+#contents_sub .vertical-list-table {
+	width: 500px;
+	height: auto;
+	margin-left: 5%;
+	margin-bottom: 5px;
+}
+
+#contents_sub .vertical-list-table tr td {
+	height: auto;
+	min-height: 50px;
+}
+
+#contents_sub .vertical-list-table tr th {
+	width: 30%;
+	background-color: orange;
+}
+
+#contents_sub .vertical-list-table tr td:nth-child(2) {
+	width: 70%;
+}
+
+#contents_sub .vertical-list-table tr td input {
+	width: 100%;
+	height: 30px;
+}
+
+#contents_sub .vertical-list-table tr td input[type=radio] {
+	width: 10%;
+	height: 15px;
+}
+
+#contents .horizontal-list-table {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 60px;
+}
+
+#contents .horizontal-list-table tr th {
+	width: 10%;
+	height: 35px;
+	background-color: skyblue;
+}
+
+#contents .horizontal-list-table tr td {
+	width: 10%;
+	height: auto;
+}
+
+#contents_sub .box {
+	margin-left: 32%;
+	margin-bottom: 10px;
+}
+
+#contents .submit_btn_box, #contents_sub .submit_btn_box {
+	width: 200px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#contents .submit_btn, #contents_sub .submit_btn {
+	width: 200px;
+	height: 50px;
+	padding: 10px;
+	color: black;
+	background: #fd9535; /*êF*/
+	border-radius: 4px; /*äpÇÃä€Ç›*/
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0
+		rgba(0, 0, 0, 0.05);
+	font-weight: bold;
+	border: solid 2px #d27d00; /*ê¸êF*/
+	cursor: pointer;
+}
+
+#contents .submit_btn:hover, #contents_sub .submit_btn:hover {
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+#footer {
+	min-width: 1080px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	background-color:  black;
+	font-size: 1.2rem;
+	color: white;
+
+}
+
+#footer, .push {
+	height: 30px;
+}
+
+.error-message {
+	text-align: left;
+	color: red;
+}
+
+s.radio {
+	width: 20%;
+	height: 20px;
+}
+
+.details{
+	max-width:140px;
+	word-wrap: break-word;
+
+}
+
+#delete_btn{
+	text-align: center;
+}

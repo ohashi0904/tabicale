@@ -1,0 +1,64 @@
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.nav {
+  float: right;
+  height: 40px;
+  margin-top: 30px;
+  padding-right: 40px;
+  display: flex;
+}
+.nav li {
+  margin-left: 1%;
+  position: relative;
+  list-style: none;
+  line-height: 40px;
+}
+.nav li a {
+  display: block;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2.8;
+  background: ;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-decoration: ;
+  background: rgba(0,0,0,0);
+  border-bottom: 1px solid white;
+  display: inline-block;
+}
+
+.nav > li:hover > a {/*layer-1*/
+
+  background: rgba(0,0,0,0.5);
+}
+.nav > li li:hover > a {/*layer-2*/
+  background: rgba(0,0,0,0.5);
+}
+
+.nav li ul {
+  top: 40px;
+  left: -42px;
+  position: absolute;
+}
+.nav li:hover > ul > li {
+  overflow: visible;
+  height: 40px;
+}
+.nav li ul li {
+  overflow: hidden;
+  height: 0;
+  transition: 0.2s;
+  background: rgba(0,0,0,0.5);
+  padding-right: 2px;
+}
+
+.nav li ul li a {
+  border-top: ;
+}

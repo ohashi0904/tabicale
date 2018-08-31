@@ -1,0 +1,46 @@
+.txt {
+	width: 99%;
+	height: 30px;
+	border: 0.5px solid #41719c;
+	font-size: 24px;
+
+}
+
+.error {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+
+.error-message {
+	background-color: #fce2c4;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	min-height: 50px;
+	color: red;
+}
+
+.success {
+	margin-bottom: 60px;
+	font-size: 24px;
+}
+
+#input_form {
+	background-color:#deebf7;
+	height: 50px;
+}
+
+th {
+	width: 30%;
+}
+
+td {
+	width: 70%;
+	text-align: center;
+}
+
+.success{
+	width:70%;
+	margin-left:10%
+}

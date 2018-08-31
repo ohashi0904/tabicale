@@ -1,0 +1,13 @@
+td {
+	width: 70%;
+	text-align: center;
+}
+
+.error-message {
+	background-color: #fce2c4;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	min-height: 50px;
+	color: red;
+}

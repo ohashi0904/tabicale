@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+#page h1{
+	color:white;
+	margin-left:5%;
+}
+
+.admin_list{
+	width:90%;
+	height:auto;
+	background-color:white;
+	margin-bottom:60px;
+	margin-top:60px;
+	margin:0 auto;
+	table-layout:fixed;
+	word-wrap:break-word;
+}
+
+
+
+.admin_list tr th{
+	background-color:skyblue;
+}
